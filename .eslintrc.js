@@ -20,7 +20,8 @@ module.exports = defineConfig({
   extends: [
     'standard',
     'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
   ],
   plugins: ['@typescript-eslint', 'import', 'promise'],
   rules: {
