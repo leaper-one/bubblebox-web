@@ -28,9 +28,11 @@ specifiers:
   stylelint-config-standard: ^25.0.0
   typescript: ^4.6.4
   vite: ^2.9.9
+  vite-plugin-windicss: ^1.8.4
   vue: ^3.2.36
   vue-eslint-parser: ^9.0.2
   vue-tsc: ^0.34.16
+  windicss: ^3.5.4
 
 dependencies:
   vue: registry.npmmirror.com/vue/3.2.36
@@ -63,10 +65,18 @@ devDependencies:
   stylelint-config-standard: registry.npmmirror.com/stylelint-config-standard/25.0.0_stylelint@14.8.3
   typescript: registry.npmmirror.com/typescript/4.6.4
   vite: registry.npmmirror.com/vite/2.9.9_less@4.1.2
+  vite-plugin-windicss: registry.npmmirror.com/vite-plugin-windicss/1.8.4_vite@2.9.9
   vue-eslint-parser: registry.npmmirror.com/vue-eslint-parser/9.0.2_eslint@8.16.0
   vue-tsc: registry.npmmirror.com/vue-tsc/0.34.16_typescript@4.6.4
+  windicss: registry.npmmirror.com/windicss/3.5.4
 
 packages:
+
+  registry.npmmirror.com/@antfu/utils/0.5.2:
+    resolution: {integrity: sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@antfu/utils/-/utils-0.5.2.tgz}
+    name: '@antfu/utils'
+    version: 0.5.2
+    dev: true
 
   registry.npmmirror.com/@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@babel/code-frame/-/code-frame-7.16.7.tgz}
@@ -499,6 +509,34 @@ packages:
     resolution: {integrity: sha512-JtB41wXl7Au3+Nl3gD16Cfpj7k/6aCroZ6BbOiCMFCMvrOpkg/qQUXTso2XowaNqBbnkuGHurLAqkLBxNGc1hQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vue/shared/-/shared-3.2.36.tgz}
     name: '@vue/shared'
     version: 3.2.36
+
+  registry.npmmirror.com/@windicss/config/1.8.4:
+    resolution: {integrity: sha512-i4fFGFfZoRess6WMkauykHC3PFd9xKYVx7lSuLfMK7sgo6x3+l4dY42GbsWMHyLqH1sTMfyt1LgfXSIKYJozSA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@windicss/config/-/config-1.8.4.tgz}
+    name: '@windicss/config'
+    version: 1.8.4
+    dependencies:
+      debug: registry.npmmirror.com/debug/4.3.4
+      jiti: registry.npmmirror.com/jiti/1.13.0
+      windicss: registry.npmmirror.com/windicss/3.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@windicss/plugin-utils/1.8.4:
+    resolution: {integrity: sha512-DqJVwAfzlgd8nYSNlmhXOey32pI8UwH7QiOWdFS/AR2O/q9oLDGHDn97Its/kZdfoyhi8ylwZNP2Pk0H7cihhQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@windicss/plugin-utils/-/plugin-utils-1.8.4.tgz}
+    name: '@windicss/plugin-utils'
+    version: 1.8.4
+    dependencies:
+      '@antfu/utils': registry.npmmirror.com/@antfu/utils/0.5.2
+      '@windicss/config': registry.npmmirror.com/@windicss/config/1.8.4
+      debug: registry.npmmirror.com/debug/4.3.4
+      fast-glob: registry.npmmirror.com/fast-glob/3.2.11
+      magic-string: registry.npmmirror.com/magic-string/0.26.2
+      micromatch: registry.npmmirror.com/micromatch/4.0.5
+      windicss: registry.npmmirror.com/windicss/3.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   registry.npmmirror.com/acorn-jsx/5.3.2_acorn@8.7.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz}
@@ -2516,6 +2554,13 @@ packages:
     version: 2.0.0
     dev: true
 
+  registry.npmmirror.com/jiti/1.13.0:
+    resolution: {integrity: sha512-/n9mNxZj/HDSrincJ6RP+L+yXbpnB8FybySBa+IjIaoH9FIxBbrbRT5XUbe8R7zuVM2AQqNMNDDqz0bzx3znOQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jiti/-/jiti-1.13.0.tgz}
+    name: jiti
+    version: 1.13.0
+    hasBin: true
+    dev: true
+
   registry.npmmirror.com/js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-tokens/-/js-tokens-4.0.0.tgz}
     name: js-tokens
@@ -2575,6 +2620,12 @@ packages:
     resolution: {integrity: sha512-b0/9J1O9Jcyik1GC6KC42hJ41jKwdO/Mq8Mdo5sYN+IuRTXs2YFHZC3kZSx6ueusqa95x3wLYe/ytKjbAfGixA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/known-css-properties/-/known-css-properties-0.25.0.tgz}
     name: known-css-properties
     version: 0.25.0
+    dev: true
+
+  registry.npmmirror.com/kolorist/1.5.1:
+    resolution: {integrity: sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/kolorist/-/kolorist-1.5.1.tgz}
+    name: kolorist
+    version: 1.5.1
     dev: true
 
   registry.npmmirror.com/less/4.1.2:
@@ -2732,6 +2783,15 @@ packages:
     version: 0.25.9
     dependencies:
       sourcemap-codec: registry.npmmirror.com/sourcemap-codec/1.4.8
+
+  registry.npmmirror.com/magic-string/0.26.2:
+    resolution: {integrity: sha512-NzzlXpclt5zAbmo6h6jNc8zl2gNRGHvmsZW4IvZhTC4W7k4OlLP+S5YLussa/r3ixNT66KOQfNORlXHSOy/X4A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/magic-string/-/magic-string-0.26.2.tgz}
+    name: magic-string
+    version: 0.26.2
+    engines: {node: '>=12'}
+    dependencies:
+      sourcemap-codec: registry.npmmirror.com/sourcemap-codec/1.4.8
+    dev: true
 
   registry.npmmirror.com/make-dir/2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/make-dir/-/make-dir-2.1.0.tgz}
@@ -4083,6 +4143,23 @@ packages:
       spdx-expression-parse: registry.npmmirror.com/spdx-expression-parse/3.0.1
     dev: true
 
+  registry.npmmirror.com/vite-plugin-windicss/1.8.4_vite@2.9.9:
+    resolution: {integrity: sha512-LSZAO8BZn3x406GRbYX5t5ONXXJVdqiQtN1qrznLA/Dy5/NzZVhfcrL6N1qEYYO7HsCDT4pLAjTzObvDnM9Y8A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-windicss/-/vite-plugin-windicss-1.8.4.tgz}
+    id: registry.npmmirror.com/vite-plugin-windicss/1.8.4
+    name: vite-plugin-windicss
+    version: 1.8.4
+    peerDependencies:
+      vite: ^2.0.1
+    dependencies:
+      '@windicss/plugin-utils': registry.npmmirror.com/@windicss/plugin-utils/1.8.4
+      debug: registry.npmmirror.com/debug/4.3.4
+      kolorist: registry.npmmirror.com/kolorist/1.5.1
+      vite: registry.npmmirror.com/vite/2.9.9_less@4.1.2
+      windicss: registry.npmmirror.com/windicss/3.5.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   registry.npmmirror.com/vite/2.9.9_less@4.1.2:
     resolution: {integrity: sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-2.9.9.tgz}
     id: registry.npmmirror.com/vite/2.9.9
@@ -4185,6 +4262,14 @@ packages:
     hasBin: true
     dependencies:
       isexe: registry.npmmirror.com/isexe/2.0.0
+    dev: true
+
+  registry.npmmirror.com/windicss/3.5.4:
+    resolution: {integrity: sha512-x2Iu0a69dtNiKHMkR886lx0WKbZI5GqvXyvGBCJ2VA6rcjKYjnzCA/Ljd6hNQBfqlkSum8J+qAVcCfLzQFI4rQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/windicss/-/windicss-3.5.4.tgz}
+    name: windicss
+    version: 3.5.4
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: true
 
   registry.npmmirror.com/word-wrap/1.2.3:
