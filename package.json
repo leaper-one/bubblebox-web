@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --cache --fix --ext .ts,.tsx,.js,.jsx,.vue"
+    "lint": "eslint . --cache --fix --ext .ts,.tsx,.js,.jsx,.vue",
+    "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.2.36"
@@ -24,9 +25,14 @@
     "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.0.1",
+    "husky": ">=7",
+    "lint-staged": ">=10",
     "typescript": "^4.6.4",
     "vite": "^2.9.9",
     "vue-eslint-parser": "^9.0.2",
     "vue-tsc": "^0.34.16"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,vue}": "eslint --cache --fix"
   }
 }
