@@ -4,7 +4,8 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
-    "mrmlnc.vscode-less"
+    "mrmlnc.vscode-less",
+    "voorjaar.windicss-intellisense"
   ],
   // enable the Take Over Mode
   "unwantedRecommendations": ["vscode.typescript-language-features"]
