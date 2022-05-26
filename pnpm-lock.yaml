@@ -13,6 +13,7 @@ specifiers:
   eslint-plugin-n: ^15.2.0
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-promise: ^6.0.0
+  eslint-plugin-simple-import-sort: ^7.0.0
   eslint-plugin-vue: ^9.0.1
   husky: '>=7'
   less: ^4.1.2
@@ -50,6 +51,7 @@ devDependencies:
   eslint-plugin-n: registry.npmmirror.com/eslint-plugin-n/15.2.0_eslint@8.16.0
   eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.0.0_j7rsahgqtkecno6yauhsgsglf4
   eslint-plugin-promise: registry.npmmirror.com/eslint-plugin-promise/6.0.0_eslint@8.16.0
+  eslint-plugin-simple-import-sort: registry.npmmirror.com/eslint-plugin-simple-import-sort/7.0.0_eslint@8.16.0
   eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/9.0.1_eslint@8.16.0
   husky: registry.npmmirror.com/husky/8.0.1
   less: registry.npmmirror.com/less/4.1.2
@@ -1678,6 +1680,17 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
+    dependencies:
+      eslint: registry.npmmirror.com/eslint/8.16.0
+    dev: true
+
+  registry.npmmirror.com/eslint-plugin-simple-import-sort/7.0.0_eslint@8.16.0:
+    resolution: {integrity: sha512-U3vEDB5zhYPNfxT5TYR7u01dboFZp+HNpnGhkDB2g/2E4wZ/g1Q9Ton8UwCLfRV9yAKyYqDh62oHOamvkFxsvw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-7.0.0.tgz}
+    id: registry.npmmirror.com/eslint-plugin-simple-import-sort/7.0.0
+    name: eslint-plugin-simple-import-sort
+    version: 7.0.0
+    peerDependencies:
+      eslint: '>=5.0.0'
     dependencies:
       eslint: registry.npmmirror.com/eslint/8.16.0
     dev: true

@@ -23,7 +23,7 @@ module.exports = defineConfig({
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended'
   ],
-  plugins: ['@typescript-eslint', 'import', 'promise'],
+  plugins: ['@typescript-eslint', 'import', 'promise', 'simple-import-sort'],
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -68,6 +68,8 @@ module.exports = defineConfig({
       }
     ],
     semi: ['error', 'never'],
-    'no-undef': 'off'
+    'no-undef': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error'
   }
 })
