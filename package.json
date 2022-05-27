@@ -13,6 +13,7 @@
     "format": "prettier --loglevel warn --write \"**/*.{ts,tsx,js,jsx,vue,css,md}\""
   },
   "dependencies": {
+    "naive-ui": "^2.29.0",
     "vue": "^3.2.36"
   },
   "devDependencies": {
