@@ -13,5 +13,8 @@ export default defineConfig({
       resolvers: [NaiveUiResolver()],
       dts: false
     })
-  ]
+  ],
+  define: {
+    'process.env': {}
+  }
 })
