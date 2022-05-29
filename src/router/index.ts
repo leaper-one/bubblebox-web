@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/obs',
+    path: '/',
     name: 'obs',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
