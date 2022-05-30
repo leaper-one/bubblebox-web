@@ -3,7 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue'
 
-import OvervierwList from '../components/OverviewList.vue'
+import PrevierwList from '../components/PreviewList.vue'
 import SliderSelect from '../components/SliderSelect.vue'
 
 // 预览组件数据
@@ -95,7 +95,7 @@ const sort = ref(false)
         </n-list>
       </div>
       <div>
-        <OvervierwList :list="list" />
+        <PrevierwList :list="list" />
       </div>
     </div>
   </n-message-provider>
