@@ -14,7 +14,7 @@ const logOut = () => {
 </script>
 
 <template>
-  <div class="flex align space-between">
+  <div class="flex items-center space-between">
     <div class="min-w-30px">
       <n-avatar round :src="props.avatarUrl" />
     </div>
