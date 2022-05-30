@@ -10,12 +10,12 @@ const props = defineProps<{
 
 const message = useMessage()
 
-const ClickToPreview = () => {
+const clickToPreview = () => {
   message.success('预览')
   // TODO: 实现预览的具体功能
 }
 
-const ClickToFiled = () => {
+const clickToFiled = () => {
   message.success('归档')
   // TODO: 实现归档的具体功能
 }
@@ -29,8 +29,8 @@ const ClickToFiled = () => {
       </template>
       <template #suffix>
         <div style="display: flex; flex-direction: row">
-          <n-button @click="ClickToPreview()">预览</n-button>
-          <n-button @click="ClickToFiled()">归档</n-button>
+          <n-button @click="clickToPreview()">预览</n-button>
+          <n-button @click="clickToFiled()">归档</n-button>
         </div>
       </template>
       <n-thing>
