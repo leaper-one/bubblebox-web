@@ -3,10 +3,13 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue'
 
+import PluginStyleSelector from '../components/PluginStyleSelector.vue'
 import PrevierwList from '../components/PreviewList.vue'
 import SliderSelect from '../components/SliderSelect.vue'
+import UploadWay from '../components/UploadWay.vue'
 
 // 预览组件数据
+// TODO：获取投稿信息
 const list = [
   {
     avatar: 'https://photo.zjlblog.site/avatar.jpg',
@@ -19,6 +22,7 @@ const list = [
 ]
 
 // 字体大小数据
+// TODO：获取字体大小数据，实现相关逻辑
 const fontList = {
   title: '字体大小',
   marks: {
@@ -38,6 +42,7 @@ const fontList = {
 }
 
 // 不透明度数据
+// TODO：获取不透明度数据，实现相关逻辑
 const transparencyList = {
   title: '不透明度',
   marks: {},
@@ -48,6 +53,29 @@ const transparencyList = {
 
 // 排序
 const sort = ref(false)
+
+// 样式选择
+// TODO：获取已选择的样式
+const styleSelect = 'style2'
+const styleOptions = [
+  {
+    label: '默认样式1',
+    value: 'style1'
+  },
+  {
+    label: '默认样式2',
+    value: 'style2'
+  },
+  {
+    label: '默认样式3',
+    value: 'style3'
+  }
+]
+
+// 投稿方式
+// TODO：获取投稿方式
+const uploadWayEmail = 'example@email.com'
+const uploadWayUrl = 'www.example.com'
 </script>
 
 <template>
@@ -77,6 +105,18 @@ const sort = ref(false)
               :usePercent="true"
               :step="1"
             />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-1/2 ml-8">
+          <!-- 投稿方式 -->
+          <div>
+            <UploadWay :email="uploadWayEmail" :url="uploadWayUrl" />
+          </div>
+
+          <!-- 选择样式 -->
+          <div class="w-1/1">
+            <PluginStyleSelector :styleSelect="styleSelect" :styleOptions="styleOptions" />
           </div>
         </div>
       </div>
