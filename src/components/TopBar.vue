@@ -9,13 +9,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex row align justify">
-    <div style="display: flex; flex-direction: row; justify-content: space-around; width: 80%">
-      <div class="flex row" style="width: 25%; font-size: 24px; font-weight: bolder">
+  <div class="flex flex-row items-center justify-center">
+    <div class="flex flex-row justify-around w-4/5">
+      <div class="flex flex-row w-1/5 min-w-190px font-bold text-3xl">
         {{ props.title }}
       </div>
-      <div style="width: 50%"></div>
-      <div class="flex row-reverse" style="width: 25%">
+      <div class="w-1/2"></div>
+      <div class="flex flex-row-reverse w-1/4">
         <TopBatUserCard :avatarUrl="props.avatar" :userName="props.userName" />
       </div>
     </div>

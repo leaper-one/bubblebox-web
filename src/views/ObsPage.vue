@@ -52,11 +52,11 @@ const sort = ref(false)
 
 <template>
   <n-message-provider>
-    <div style="display: flex; flex-direction: column; width: 80%">
-      <div style="display: flex; flex-direction: row; width: 50%">
-        <div style="display: flex; flex-direction: column; width: 100%">
+    <div class="flex flex-col w-4/5">
+      <div class="flex flex-row w-1/2">
+        <div class="flex flex-col w-1/1">
           <!-- 字体 -->
-          <div style="width: 100%">
+          <div class="w-1/1">
             <SliderSelect
               :title="fontList.title"
               :marks="fontList.marks"
@@ -67,7 +67,7 @@ const sort = ref(false)
           </div>
 
           <!-- 不透明度 -->
-          <div style="width: 100%">
+          <div class="w-1/1">
             <SliderSelect
               :title="transparencyList.title"
               :marks="transparencyList.marks"
@@ -80,14 +80,14 @@ const sort = ref(false)
           </div>
         </div>
       </div>
-      <div style="width: 10%; min-width: 220px">
+      <div class="w-1/10 min-w-220px">
         <n-list bordered>
           <n-list-item>
             <template #suffix>
               <n-switch v-model:value="sort" />
             </template>
             <template #default>
-              <div style="min-width: 130px; font-size: large">
+              <div class="min-w-130px text-lg">
                 泡泡排序{{ sort.valueOf() ? '已开启' : '已关闭' }}
               </div>
             </template>

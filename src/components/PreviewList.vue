@@ -28,7 +28,7 @@ const clickToFiled = () => {
         <n-avatar round :src="item.avatar" />
       </template>
       <template #suffix>
-        <div style="display: flex; flex-direction: row">
+        <div class="flex flex-row">
           <n-button @click="clickToPreview()">预览</n-button>
           <n-button @click="clickToFiled()">归档</n-button>
         </div>

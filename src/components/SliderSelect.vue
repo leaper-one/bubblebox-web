@@ -19,11 +19,11 @@ const step = ref(props.step).value ? 1 : 'mark'
   <n-list bordered>
     <n-list-item>
       <template #default>
-        <div style="display: flex; flex: auto; flex-direction: row">
-          <div class="flex row" style="width: 20%; min-width: 80px; font-size: large">
+        <div class="flex flex-auto flex-row">
+          <div class="flex flex-row w-1/5 min-w-80px text-lg">
             {{ props.title }}
           </div>
-          <div class="flex flex-auto" style="margin: 0">
+          <div class="flex flex-auto m-0 min-w-160px">
             <n-slider
               v-model:value="value"
               :marks="props.marks"
@@ -34,7 +34,7 @@ const step = ref(props.step).value ? 1 : 'mark'
               :style="{ margin: '4px 0' }"
             />
           </div>
-          <div class="flex row-reverse" style="width: 15%; min-width: 60px; font-size: large">
+          <div class="flex flex-row-reverse w-3/20 min-w-60px text-lg">
             {{ value }} {{ usePercent ? '%' : '' }}
           </div>
         </div>

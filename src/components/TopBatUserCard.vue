@@ -15,10 +15,10 @@ const logOut = () => {
 
 <template>
   <div class="flex align space-between">
-    <div style="min-width: 30px">
+    <div class="min-w-30px">
       <n-avatar round :src="props.avatarUrl" />
     </div>
-    <div style="min-width: 120px; font-weight: bold">{{ props.userName }}</div>
+    <div class="min-w-120px font-bold">{{ props.userName }}</div>
     <div>
       <n-button type="error" @click="logOut()">登出</n-button>
     </div>

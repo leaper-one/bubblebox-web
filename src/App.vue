@@ -11,7 +11,7 @@ const userName = '测试名字'
 <template>
   <n-message-provider>
     <TopBar :title="pageTitle" :avatar="avatarUrl" :userName="userName" />
-    <div id="main">
+    <div class="flex flex-col items-center justify-center p-30px" id="main">
       <router-view />
     </div>
   </n-message-provider>
@@ -24,45 +24,5 @@ const userName = '测试名字'
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-#main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-}
-
-.flex {
-  display: flex;
-}
-
-.align {
-  align-items: center;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.justify {
-  justify-content: center;
-}
-
-.row {
-  flex-direction: row;
-}
-
-.column {
-  flex-direction: column;
-}
-
-.row-reverse {
-  flex-direction: row-reverse;
-}
-
-.flex-auto {
-  flex: auto;
 }
 </style>
