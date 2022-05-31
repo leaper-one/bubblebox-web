@@ -1,15 +1,24 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import TopBar from './components/TopBar.vue'
+
+const pageTitle = 'OBS插件后台'
+const avatarUrl = 'https://photo.zjlblog.site/avatar.jpg'
+const userName = '测试名字'
 </script>
 
 <template>
-  <n-button> Hello NaiveUI </n-button>
+  <n-message-provider>
+    <TopBar :title="pageTitle" :avatar="avatarUrl" :userName="userName" />
+    <div class="flex flex-col items-center justify-center p-30px" id="main">
+      <router-view />
+    </div>
+  </n-message-provider>
 </template>
 
 <style>
 #app {
-  margin-top: 60px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
   text-align: center;
