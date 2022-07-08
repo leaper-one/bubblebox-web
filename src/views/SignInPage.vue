@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { useMessage } from 'naive-ui'
+import { ref } from 'vue'
+const message = useMessage()
+
+// TODO：登录数据获取
+const signinInfo = ref({
+  name: '',
+  password: ''
+})
+
+// TODO：登录功能
+const signin = () => {
+  message.success('登陆成功！')
+}
+</script>
+
 <template>
   <div class="text-3xl font-bold text-blue-500 pb-3">LEAPERone</div>
   <n-card class="max-w-28em">
@@ -12,13 +29,18 @@
       <n-tab-pane name="signin" tab="登录">
         <n-form>
           <n-form-item-row label="帐号">
-            <n-input />
+            <n-input v-model:value="signinInfo.name" placeholder="请输入帐号" :maxlength="20" />
           </n-form-item-row>
           <n-form-item-row label="密码">
-            <n-input />
+            <n-input
+              v-model:value="signinInfo.password"
+              placeholder="请输入密码"
+              :maxlength="20"
+              type="password"
+            />
           </n-form-item-row>
         </n-form>
-        <n-button type="primary" block secondary strong> 登录 </n-button>
+        <n-button type="primary" block secondary strong @click="signin()"> 登录 </n-button>
       </n-tab-pane>
     </n-tabs>
   </n-card>
