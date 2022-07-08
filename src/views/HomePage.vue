@@ -2,11 +2,14 @@
 import { ref } from 'vue'
 
 const appear = ref(true)
+
+// TODO:实现页面跳转
+const learnMore = () => {}
 </script>
 
 <template>
   <div>
-    <header class="">
+    <header>
       <div class="float-left font-700 text-lg text-blue-500">LEAPERone</div>
     </header>
     <div class="pt-30"></div>
@@ -16,11 +19,7 @@ const appear = ref(true)
         <div class="p-3"></div>
         <div class="text-blue-500">LEAPERone</div>
         <div class="pt-4">
-          <n-button
-            type="info"
-            ghost
-            class="text-lg text-blue-500 border-gray-0 px-3 py-2 rounded-5px flex align-left font-700 shadow-xl button"
-          >
+          <n-button type="info" ghost class="!text-lg !flex !shadow-xl" @click="learnMore">
             Learn more
           </n-button>
         </div>
