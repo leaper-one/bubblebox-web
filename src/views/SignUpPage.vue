@@ -31,7 +31,7 @@ const signup = () => {
       default-value="signup"
       size="large"
       animated
-      style="margin: 0 -4px"
+      :style="{ margin: '0 -4px' }"
       pane-style="padding-left: 4px; padding-right: 4px; box-sizing: border-box;"
     >
       <n-tab-pane name="signup" tab="注册">

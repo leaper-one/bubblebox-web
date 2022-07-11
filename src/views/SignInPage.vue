@@ -23,7 +23,7 @@ const signin = () => {
       default-value="signin"
       size="large"
       animated
-      style="margin: 0 -4px"
+      :style="{ margin: '0 -4px' }"
       pane-style="padding-left: 4px; padding-right: 4px; box-sizing: border-box;"
     >
       <n-tab-pane name="signin" tab="登录">
