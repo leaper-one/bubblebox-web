@@ -80,65 +80,67 @@ const uploadWayUrl = 'www.example.com'
 
 <template>
   <n-message-provider>
-    <div class="flex flex-col w-4/5 min-w-800px">
-      <div class="flex flex-row w-1/1">
-        <div class="flex flex-col w-1/2 min-w-360px mr-8">
-          <!-- 字体 -->
-          <div class="w-1/1">
-            <SliderSelect
-              :title="fontList.title"
-              :marks="fontList.marks"
-              :defaultValue="fontList.defaultValue"
-              :max="fontList.max"
-              :min="fontList.min"
-            />
+    <div class="w-4/5">
+      <div class="flex flex-col w-4/5 min-w-800px">
+        <div class="flex flex-row w-1/1">
+          <div class="flex flex-col w-1/2 min-w-360px mr-8">
+            <!-- 字体 -->
+            <div class="w-1/1">
+              <SliderSelect
+                :title="fontList.title"
+                :marks="fontList.marks"
+                :defaultValue="fontList.defaultValue"
+                :max="fontList.max"
+                :min="fontList.min"
+              />
+            </div>
+
+            <!-- 不透明度 -->
+            <div class="w-1/1">
+              <SliderSelect
+                :title="transparencyList.title"
+                :marks="transparencyList.marks"
+                :defaultValue="transparencyList.defaultValue"
+                :max="transparencyList.max"
+                :min="transparencyList.min"
+                :usePercent="true"
+                :step="1"
+              />
+            </div>
           </div>
 
-          <!-- 不透明度 -->
-          <div class="w-1/1">
-            <SliderSelect
-              :title="transparencyList.title"
-              :marks="transparencyList.marks"
-              :defaultValue="transparencyList.defaultValue"
-              :max="transparencyList.max"
-              :min="transparencyList.min"
-              :usePercent="true"
-              :step="1"
-            />
+          <div class="flex flex-col w-1/2 ml-8">
+            <!-- 投稿方式 -->
+            <div>
+              <UploadWay :email="uploadWayEmail" :url="uploadWayUrl" />
+            </div>
+
+            <!-- 选择样式 -->
+            <div class="w-1/1">
+              <PluginStyleSelector :styleSelect="styleSelect" :styleOptions="styleOptions" />
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-col w-1/2 ml-8">
-          <!-- 投稿方式 -->
-          <div>
-            <UploadWay :email="uploadWayEmail" :url="uploadWayUrl" />
-          </div>
+        <div class="w-1/10 min-w-220px">
+          <n-list bordered>
+            <n-list-item>
+              <template #suffix>
+                <n-switch v-model:value="sort" />
+              </template>
 
-          <!-- 选择样式 -->
-          <div class="w-1/1">
-            <PluginStyleSelector :styleSelect="styleSelect" :styleOptions="styleOptions" />
-          </div>
+              <template #default>
+                <div class="min-w-130px text-lg">
+                  泡泡排序{{ sort.valueOf() ? '已开启' : '已关闭' }}
+                </div>
+              </template>
+            </n-list-item>
+          </n-list>
         </div>
-      </div>
 
-      <div class="w-1/10 min-w-220px">
-        <n-list bordered>
-          <n-list-item>
-            <template #suffix>
-              <n-switch v-model:value="sort" />
-            </template>
-
-            <template #default>
-              <div class="min-w-130px text-lg">
-                泡泡排序{{ sort.valueOf() ? '已开启' : '已关闭' }}
-              </div>
-            </template>
-          </n-list-item>
-        </n-list>
-      </div>
-
-      <div>
-        <PrevierwList :list="list" />
+        <div>
+          <PrevierwList :list="list" />
+        </div>
       </div>
     </div>
   </n-message-provider>
