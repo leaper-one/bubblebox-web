@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useMessage } from 'naive-ui'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const message = useMessage()
 
 // TODO：登录数据获取
@@ -12,6 +14,10 @@ const signinInfo = ref({
 // TODO：登录功能
 const signin = () => {
   message.success('登陆成功！')
+}
+
+const toRegister = () => {
+  router.push('/register')
 }
 </script>
 
@@ -41,6 +47,14 @@ const signin = () => {
           </n-form-item-row>
         </n-form>
         <n-button type="primary" block secondary strong @click="signin()"> 登录 </n-button>
+        <div class="flex flex-row-reverse">
+          <div>
+            没有账号？
+            <n-button text tag="a" target="_blank" type="primary" @click="toRegister()">
+              立即注册
+            </n-button>
+          </div>
+        </div>
       </n-tab-pane>
     </n-tabs>
   </n-card>
