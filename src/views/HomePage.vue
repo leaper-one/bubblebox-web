@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const appear = ref(true)
 
 // TODO:实现页面跳转
-const learnMore = () => {}
+const learnMore = () => {
+  router.push('/admin')
+}
 </script>
 
 <template>
