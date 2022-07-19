@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TopBatUserCard from './TopBatUserCard.vue'
+import TopBarUserCard from './TopBarUserCard.vue'
 
 const props = defineProps<{
   title: string
@@ -16,7 +16,7 @@ const props = defineProps<{
       </div>
       <div class="w-1/2"></div>
       <div class="flex flex-row-reverse w-1/4">
-        <TopBatUserCard :avatarUrl="props.avatar" :userName="props.userName" />
+        <TopBarUserCard :avatarUrl="props.avatar" :userName="props.userName" />
       </div>
     </div>
   </div>
