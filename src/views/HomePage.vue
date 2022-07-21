@@ -11,7 +11,7 @@ const learnMore = () => {
 </script>
 
 <template>
-  <div>
+  <div class="max-w-43rem ml-auto mr-auto">
     <header>
       <div class="float-left font-700 text-lg text-blue-500">LEAPERone</div>
     </header>
@@ -20,7 +20,7 @@ const learnMore = () => {
       <n-collapse-transition :appear="appear">
         <div class="text-left">Welcome</div>
         <div class="p-3"></div>
-        <div class="text-blue-500">LEAPERone</div>
+        <div class="text-blue-500 text-left">LEAPERone</div>
         <div class="pt-4">
           <n-button type="info" ghost class="!text-lg !flex !shadow-xl" @click="learnMore">
             Learn more
